@@ -14,4 +14,3 @@ Run testcode.bat
 Run testcode.sh
 
 
-Lead Designer/Developer: Isaac Kerley
