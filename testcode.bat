@@ -6,5 +6,5 @@ echo.
 echo.
 echo.
 echo End of execution
-timeout /t 3
+timeout /t 5
 goto top

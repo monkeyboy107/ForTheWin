@@ -22,4 +22,5 @@ class Character:
 		pass
 
 	def say(self,words):
-		test = "\t[%s]: %s"%(self.name,words)
+		test = "\t[%s]:\t%s"%(self.name,words)
+		print(test)
