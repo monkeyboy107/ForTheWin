@@ -7,6 +7,7 @@
 ##  Character
 
 
+
 class Character:
 
 	## Attributes

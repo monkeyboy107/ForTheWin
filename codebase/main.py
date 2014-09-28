@@ -12,6 +12,6 @@
 
 import Character
 
-john = Character()
+john = Character
 john.name = "John"
 john.say("This is a test!")
