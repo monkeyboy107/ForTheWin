@@ -14,9 +14,13 @@ def PlaceCheck():
 '''
 #Arrays
 inv = [0]
+RanMineItem = ['Coal','Coal','Dirt','Dirt','Dirt','Rock','Rock','Rock']
+Creatures = ['Weak Creature','Weak Creature','Weak Creature','Weak Creature','Weak Creature','Weak Creature','Regular Creature','Regular Creature','Regular Creature','Regular Creature','Regular Creature','Regular Creature','Regular Creature','Hard Creature','Rare Creature']
+People = ['Villigar','Villigar','Villigar','Villigar','Villigar','Rich Kid','Rich Kid','Rich Kid','Rich Kid','Poor Fighter','Poor Fighter','Poor Fighter','Poor Fighter','Poor Fighter','Poor Fighter','Poor Fighter','Poor Fighter','Poor Fighter','Poor Fighter','Poor Fighter','Good Fighter','Good Fighter','Nearly Invincible Enemy']
+BattleFieldEnemy = [Creatures[RanCreature],Creatures[RanCreature],Creatures[RanCreature],People[RanPeople]]
+StoreItems = ['Sword','Bow','25 Arrows']
 #Varibles
 'Note to self I need to seriously clean up the varibles I use'
-
 PlayerName = 0
 RandomNum = random.randrange(5)
 PlayerAge = 0
@@ -37,6 +41,8 @@ Going = 0
 PlayerChoice = 0
 Currency = 0
 RanPlayerAge = int(RanPlayerAge)
+RanCreature = random.randrange(len(Creatures))
+RanPeople = random.randrange(len(People))
 ##########################################################################################
 #Main Code
 ##Player Setup
@@ -86,6 +92,7 @@ while Areas == 1:
 		PlayersChoice = input("You arive at a battlefield. Where would you like to go? ")
 	if Going == 2:
 		PlayersChoice = input("You arrive at a mineshaft. What would you like to do? ")
+		
 	if Going == 3:
 		input("You enter a shop. You see a shop keeper. ")
 		PlayersChoice = input("Shop Keeper: What'll you be having? (item 1 item 2 item 3) ")
