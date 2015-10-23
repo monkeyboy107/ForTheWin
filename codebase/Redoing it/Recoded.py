@@ -36,6 +36,7 @@ PlayerStr = str(PlayerName)
 Going = 0
 PlayerChoice = 0
 Currency = 0
+RanPlayerAge = int(RanPlayerAge)
 ##########################################################################################
 #Main Code
 ##Player Setup
@@ -95,7 +96,7 @@ while Areas == 1:
 			exit()
 		if PlayerChoice == n:
 			input("Okay")
-		#if PlayerChoice
+		#if PlayerChoice #This checks for if it is one of the choices
 	if Going <= 5:
 		input("Im sorry but that is not one of the choices. Please select another one ") #The point of this is to prevent the player from accidently doing a invalid number
 	Areas = 1
