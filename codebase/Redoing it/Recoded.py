@@ -89,6 +89,13 @@ while Areas == 1:
 		input("You enter a shop. You see a shop keeper. ")
 		PlayersChoice = input("Shop Keeper: What'll you be having? (item 1 item 2 item 3) ")
 		input("I'll like to have " + str(PlayerChoice))
-	if Going <= 4:
-		input("Im sorry but that is not one of the choices. Please select another one ")
+	if Going == 4:
+		PlayerChoice("Are you sure you want to exit? (Y is Yes and n is No) ")
+		if PlayerChoice == Y:
+			exit()
+		if PlayerChoice == n:
+			input("Okay")
+		#if PlayerChoice
+	if Going <= 5:
+		input("Im sorry but that is not one of the choices. Please select another one ") #The point of this is to prevent the player from accidently doing a invalid number
 	Areas = 1
