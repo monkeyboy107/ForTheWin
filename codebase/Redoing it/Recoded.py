@@ -6,6 +6,55 @@
 ##########################################################################################
 #Imports
 import random
+#classes
+class character:
+	health = 100
+	isPlayable = False
+	inv = []
+	def __init__(self, name):
+		self.name = name
+	def equip(self, item):
+		self.held = item
+	def unequip(self)
+		self.equip(None)
+	def attack(self, enemy):
+		if self.held == None:
+			print("You are not currently holding any items")
+		elif self.held.is_weapon == False:
+			print("You lack any weapon of any sort")
+		else:
+			enemy.health -= weapon.damage
+	def heal(self, person):
+		if held.can_heal == None:
+			print("You are not currently holding any items... I dont like that fact I hurt you")
+			self.health -= 1
+		elif self.held.aid == False:
+			print("The item you are holding is not a weapon")
+		else:
+			self.health += aid.heal
+class item:
+	can_heal = False
+	is_weapon = False
+class weapon(item):
+	is_weapon = True
+class aid(item):
+	can_heal = True
+class player(character):
+	isPlayable = True
+class enemy(character):
+	inv = [sword]
+class sword(weapon):
+	weapon.damage = 10
+class club(weapon):
+	weapon.damage = 5
+class knife(weapon):
+	weapon.damage = 3
+class lightSword(weapon):
+	weapon.damage = 25
+class potion(aid):
+	aid.heal = 25
+class apple(aid):
+	aid.heal = 5
 #Functions
 '''
 def ResetVar():
@@ -13,11 +62,13 @@ def PlaceCheck():
 	while PlacesNum
 '''
 #Arrays
+'''
 inv = [0]
 RanMineItem = ['Coal','Coal','Dirt','Dirt','Dirt','Rock','Rock','Rock']
 Creatures = ['Weak Creature','Weak Creature','Weak Creature','Weak Creature','Weak Creature','Weak Creature','Regular Creature','Regular Creature','Regular Creature','Regular Creature','Regular Creature','Regular Creature','Regular Creature','Hard Creature','Rare Creature']
 People = ['Villigar','Villigar','Villigar','Villigar','Villigar','Rich Kid','Rich Kid','Rich Kid','Rich Kid','Poor Fighter','Poor Fighter','Poor Fighter','Poor Fighter','Poor Fighter','Poor Fighter','Poor Fighter','Poor Fighter','Poor Fighter','Poor Fighter','Poor Fighter','Good Fighter','Good Fighter','Nearly Invincible Enemy']
 BattleFieldEnemy = [Creatures[RanCreature],Creatures[RanCreature],Creatures[RanCreature],People[RanPeople]]
+'''
 StoreItems = ['Sword','Bow','25 Arrows']
 #Varibles
 'Note to self I need to seriously clean up the varibles I use'
