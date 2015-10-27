@@ -72,94 +72,93 @@ inv = [0]
 RanMineItem = ['Coal','Coal','Dirt','Dirt','Dirt','Rock','Rock','Rock']
 Creatures = ['Weak Creature','Weak Creature','Weak Creature','Weak Creature','Weak Creature','Weak Creature','Regular Creature','Regular Creature','Regular Creature','Regular Creature','Regular Creature','Regular Creature','Regular Creature','Hard Creature','Rare Creature']
 People = ['Villigar','Villigar','Villigar','Villigar','Villigar','Rich Kid','Rich Kid','Rich Kid','Rich Kid','Poor Fighter','Poor Fighter','Poor Fighter','Poor Fighter','Poor Fighter','Poor Fighter','Poor Fighter','Poor Fighter','Poor Fighter','Poor Fighter','Poor Fighter','Good Fighter','Good Fighter','Nearly Invincible Enemy']
-BattleFieldEnemy = [Creatures[RanCreature],Creatures[RanCreature],Creatures[RanCreature],People[RanPeople]]
+BattleFieldEnemy = [Creatures[ranCreature],Creatures[ranCreature],Creatures[ranCreature],People[ranPeople]]
 '''
 StoreItems = ['Sword','Bow','25 Arrows']
 #Varibles
 'Note to self I need to seriously clean up the varibles I use'
-PlayerName = 0
-RandomNum = random.randrange(5)
-PlayerAge = 0
-RanPlayerAge = random.randrange(100) + 1
+playerName = 0
+ranNum = random.randrange(5)
+playerAge = 0
+ranPlayerAge = random.randrange(100) + 1
 HP = 100
-MaxHP = 100
+maxHP = 100
 SP = 25
-MaxSP = 25
-RandomNum = random.randrange(5)
-DayCount = 0
-ErrorCheck = 0
-PlacesTwo = 0
-ArrayNum = 0
-Areas = 0
-FakePlayerName = 0
-PlayerStr = str(PlayerName)
-Going = 0
-PlayerChoice = 0
-Currency = 0
-RanPlayerAge = int(RanPlayerAge)
-RanCreature = random.randrange(len(Creatures))
-RanPeople = random.randrange(len(People))
+maxSP = 25
+dayCount = 0
+errorCheck = 0
+placesTwo = 0
+arrayNum = 0
+area = 0
+fakeplayerName = 0
+playerStr = str(playerName)
+going = 0
+playerChoice = 0
+currency = 0
+ranPlayerAge = int(ranPlayerAge)
+ranCreature = random.randrange(len(Creatures))
+ranPeople = random.randrange(len(People))
 ##########################################################################################
 #Main Code
 ##Player Setup
-while ErrorCheck != 1:
-	PlayerName = input("What is your name? ")
+while errorCheck != 1:
+	playerName = input("What is your name? ")
 	try:
-		str(PlayerName)
-		ErrorCheck = ErrorCheck	+ 1
+		str(playerName)
+		errorCheck = errorCheck	+ 1
 	except:
 		input("Im sorry but that is not an accepted name ")
-while ErrorCheck != 2:
-	PlayerAge = input("What is your age? ")
+while errorCheck != 2:
+	playerAge = input("What is your age? ")
 	try:
-		int(PlayerAge)
-		PlayerAge = int(PlayerAge)
-		ErrorCheck = ErrorCheck + 1
+		int(playerAge)
+		playerAge = int(playerAge)
+		errorCheck = errorCheck + 1
 	except:
 		input("That is not a number. ")
-if PlayerAge == RanPlayerAge:
+if playerAge == ranPlayerAge:
 	input("I knew your age was that! ")
-elif PlayerAge < RanPlayerAge:
-	input("I thought you where much younger... infact I thought you where " + str(RanPlayerAge) + " years old. My bad. ")
-elif PlayerAge > str(RanPlayerAge):
-	input("I thought you where much older... infact I thought you where " + str(RanPlayerAge) + " years old. My bad. ")
+elif playerAge < ranPlayerAge:
+	input("I thought you where much younger... infact I thought you where " + str(ranPlayerAge) + " years old. My bad. ")
+elif playerAge > str(ranPlayerAge):
+	input("I thought you where much older... infact I thought you where " + str(ranPlayerAge) + " years old. My bad. ")
 ##Player Startup
 input("Stranger: Oh no! ")
-input(str(PlayerName) + ": Ah my hea- ")
+input(str(playerName) + ": Ah my hea- ")
 input("(Loud thud)")
 input("Stranger: Oh no! ")
-if Areas == 0:
+if area == 0:
 		input("You wake up in a house, in a warm bed. The smell of food reaches your nose. ")
 		input("Stranger: Ah good you are awake ")
-		input(str(PlayerName) + ": Yes I am. Who are you exactly ")
+		input(str(playerName) + ": Yes I am. Who are you exactly ")
 		input("John: My name is John. Might you tell me what yours is? ")
-		PlayerFakenName = (PlayerStr + ": My name is ")
+		PlayerFakenName = (playerStr + ": My name is ")
 ##Places
-while Areas == 1:
-	Going = input("Where would you like to go? (1 is John's House, 2 is a battlefield, 3 is a mineshaft, 4 is a shop) ") - 1
-	if Going == 0:
-		PlayerChoice = input("What would you like to do? (1 is where you sleep, 2 is where you talk to John, 3 is where you leave) ")
-		if PlayerChoice == 1:
-			HP = int(MaxHP)
-			SP = int(MaxSP)
-		if PlayerChoice == 2:
+while area == 1:
+	going = input("Where would you like to go? (1 is John's House, 2 is a battlefield, 3 is a mineshaft, 4 is a shop) ") - 1
+	if going == 0:
+		playerChoice = input("What would you like to do? (1 is where you sleep, 2 is where you talk to John, 3 is where you leave) ")
+		if playerChoice == 1:
+			HP = int(maxHP)
+			SP = int(maxSP)
+		if playerChoice == 2:
 			input("You talk to John")
-	if Going == 1:
+	if going == 1:
 		PlayersChoice = input("You arive at a battlefield. Where would you like to go? ")
-	if Going == 2:
+	if going == 2:
 		PlayersChoice = input("You arrive at a mineshaft. What would you like to do? ")
 		
-	if Going == 3:
+	if going == 3:
 		input("You enter a shop. You see a shop keeper. ")
 		PlayersChoice = input("Shop Keeper: What'll you be having? (item 1 item 2 item 3) ")
-		input("I'll like to have " + str(PlayerChoice))
-	if Going == 4:
-		PlayerChoice("Are you sure you want to exit? (Y is Yes and n is No) ")
-		if PlayerChoice == Y:
+		input("I'll like to have " + str(playerChoice))
+	if going == 4:
+		playerChoice("Are you sure you want to exit? (Y is Yes and n is No) ")
+		if playerChoice == Y:
 			exit()
-		if PlayerChoice == n:
+		if playerChoice == n:
 			input("Okay")
-		#if PlayerChoice #This checks for if it is one of the choices
-	if Going <= 5:
+		#if playerChoice #This checks for if it is one of the choices
+	if going <= 5:
 		input("Im sorry but that is not one of the choices. Please select another one ") #The point of this is to prevent the player from accidently doing a invalid number
-	Areas = 1
+	area = 1
