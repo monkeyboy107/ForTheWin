@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 ##########################################################################################
 #Programmer: Isaac Kerley
-#Date: 10/22/2015
+#Date: 10/22/2015 -
 #Purpose:This is For The Win
 ##########################################################################################
 #Imports
 import random
+import Items
+import character
 #classes
 class character:
 	health = 100
@@ -32,6 +34,7 @@ class character:
 			print("The item you are holding is not a weapon")
 		else:
 			self.health += aid.heal
+##Items
 class item:
 	can_heal = False
 	is_weapon = False
@@ -39,10 +42,6 @@ class weapon(item):
 	is_weapon = True
 class aid(item):
 	can_heal = True
-class player(character):
-	isPlayable = True
-class enemy(character):
-	inv = [sword]
 class sword(weapon):
 	weapon.damage = 10
 class club(weapon):
@@ -55,6 +54,12 @@ class potion(aid):
 	aid.heal = 25
 class apple(aid):
 	aid.heal = 5
+##Characters
+class player(character):
+	isPlayable = True
+class enemy(character):
+	inv = [sword]
+    self.equip(sword)
 #Functions
 '''
 def ResetVar():
